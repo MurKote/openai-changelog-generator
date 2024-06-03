@@ -42,7 +42,21 @@ The changelog should:
 3. list each commit in the category it belongs to, based on the conventional commit standard. Commits
   that do not follow the convention commit standard should be listed at the end in an "Other" category.
   Each listing should read as a complete sentence that can be understood by a non-technical person.
-  Each commit should retain the emoji from the commit message.
+  Each entry should retain the emoji from the commit message.
+  Use the following categories to organize the changelog:
+  \`\`\`
+  ## ✨ Features
+  ## 🐛 Bug Fixes
+  ## 📝 Documentation
+  ## 🎨 Code Style
+  ## ♻️ Refactoring
+  ## ⚡️ Performance Improvements
+  ## ✅ Tests
+  ## 👷 Build System
+  ## 🔁 Continuous Integration
+  ## 🧹 Chores
+  ## ⏪️ Reverts
+  \`\`\`
 4. summarize the achievements of this release in a manner that is easily understood by non-technical
   readers before listing the commits.
 5. use Markdown formatting.
@@ -63,38 +77,38 @@ The changelog should:
   This release includes crucial bug fixes and ongoing work to enhance our release automation process. We addressed issues with Bugsnag error grouping and fixed repeated calls to cancel multipart uploads, improving overall stability and reliability. Additionally, we are testing new automation features to streamline future releases.
 
   ## ✨ Features
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - ♻️ We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## 🐛 Bug Fixes
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 🐛 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## 📝 Documentation
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 💄 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - ⛔️ We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## 🎨 Code Style
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 🎉 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## ♻️ Refactoring
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 🤞 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## ⚡️ Performance Improvements
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 💰 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## ✅ Tests
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 📈 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## 👷 Build System
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 🤿 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## 🔁 Continuous Integration
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 🦃 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## 🧹 Chores
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 🏇 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
 
   ## ⏪️ Reverts
-  - We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
+  - 💵 We optimize our ci to strip comments and minify production builds. ([#27304](https://github.com/facebook/react/pull/27304/), [3f31d8](https://github.com/facebook/react/commits/3f31d8c5d8132cc7e1763b9663344d80778cdf02)
   \`\`\`
 
 The following are the commits you should use to generate the changelog:
