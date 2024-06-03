@@ -9,6 +9,8 @@ const openAiChat = new OpenAI({apiKey: openApiKey});
 const payload = github.context.payload;
 const repositoryOwner = payload.repository.owner.login;
 const repositoryName = payload.repository.name;
+const version = core.getInput("version");
+const releaseDate = new Date();
 
 process();
 
@@ -114,6 +116,7 @@ The changelog should:
 The following are the commits you should use to generate the changelog:
 
 \`\`\`
+Release ${version} (${releaseDate.getFullYear()}-${releaseDate.getMonth() + 1}-${releaseDate.getDate()})
 ${changes}
 \`\`\`
     `;
