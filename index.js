@@ -3,7 +3,7 @@ const core = require("@actions/core");
 const { OpenAI } = require('openai');
 const github = require("@actions/github");
 
-const changes = core.getInput("changes");
+let changes = core.getInput("changes");
 const openApiKey = core.getInput("openai-api-key");
 const openAiChat = new OpenAI({apiKey: openApiKey});
 const payload = github.context.payload;
@@ -13,18 +13,8 @@ const repositoryName = payload.repository.name;
 process();
 
 async function process() {
-  console.log(buildPrompt());
-    // const parameters = OpenAI.Chat.ChatCompletionCreateParams = {
-    //     messages: [{
-    //             role: "system",
-    //             content: prompt,
-    //         },
-    //         {
-    //             role: "user",
-    //             content: changes,
-    //         }],
-    //     model: "gpt-4o",
-    // };
+    changes = (await getCommits()).join("\n");
+    console.log(buildPrompt());
     const chatCompletion = await openAiChat.chat.completions.create({
         model: "gpt-3.5-turbo",
         prompt: buildPrompt(),
@@ -110,4 +100,34 @@ The following are the commits you should use to generate the changelog:
 ${changes}
 \`\`\`
     `;
+}
+
+async function getCommits(startRef, endRef) {
+    const octokit = github.getOctokit(core.getInput("github-token"));
+    let allCommits = [];
+    let page = 1;
+
+    while (true) {
+        const commits = await octokit.repos.listCommits({
+            owner: repositoryOwner,
+            repo: repositoryName,
+            sha: endRef,
+            per_page: 100, // Adjust the per_page value as needed
+            page: page, // Fetch the current page
+        });
+
+        const filteredCommits = commits.data.filter(commit => {
+            return commit.sha!== startRef;
+        });
+
+        allCommits = allCommits.concat(filteredCommits);
+
+        if (octokit.hasNextPage(commits)) {
+            page++;
+        } else {
+            break;
+        }
+    }
+console.log("commits: ", allCommits);
+    return allCommits;
 }
