@@ -51,7 +51,7 @@ The changelog should:
   readers before listing the commits.
 5. use Markdown formatting.
 6. use the following syntax to create links: \`[http://www.example.com](#12345)\`. Links should
-  point to GitHub pull requests and only show the pull request number prefixed with ``#`` for the github
+  point to GitHub pull requests and only show the pull request number prefixed with \`#\` for the github
   repository \`${repositoryOwner}/${repositoryName}\`.
 7. not wrap the answer in a codeblock. Just output the text, nothing else. Here's a good
   example to follow, please try to match the formatting as closely as possible, only changing
