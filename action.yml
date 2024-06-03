@@ -1,0 +1,18 @@
+name: "OpenAI Changelog Generator"
+description: "Use AI to generate a non-technical, human-readable changelog for your release notes."
+inputs:
+  github-token:
+    description: "Github token, usually 'secrets.GITHUB_TOKEN'."
+    required: true
+  openai-api-key:
+    description: "Provide your OpenAI API key."
+    required: true
+outputs:
+  changelog:
+    description: "The generated changelog body for the most recent release."
+runs:
+  using: "node20"
+  main: "index.js"
+branding:
+  icon: cpu
+  color: blue
