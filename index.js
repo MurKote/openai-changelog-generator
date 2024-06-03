@@ -15,9 +15,12 @@ process();
 async function process() {
     // changes = (await getCommits()).join("\n");
     console.log(buildPrompt());
-    const chatCompletion = await openAiChat.completions.create({
+    const chatCompletion = await openAiChat.chat.completions.create({
         model: "gpt-4o",
-        prompt: buildPrompt(),
+        messages: [{
+            role: "user",
+            content: buildPrompt(),
+        }],
     });
 
     console.log(chatCompletion.result);
