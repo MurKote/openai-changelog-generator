@@ -13,7 +13,7 @@ const repositoryName = payload.repository.name;
 process();
 
 async function process() {
-    changes = (await getCommits()).join("\n");
+    // changes = (await getCommits()).join("\n");
     console.log(buildPrompt());
     const chatCompletion = await openAiChat.chat.completions.create({
         model: "gpt-3.5-turbo",
