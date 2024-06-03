@@ -26,7 +26,7 @@ async function process() {
     //     model: "gpt-4o",
     // };
     const chatCompletion = await openAiChat.chat.completions.create({
-        model: "gpt-4",
+        model: "gpt-4-32k",
         prompt: buildPrompt(),
         max_tokens: 50,
     });
