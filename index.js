@@ -1,6 +1,8 @@
+import OpenAI from "openai";
+
 const _ = require("lodash");
 const core = require("@actions/core");
-const { OpenAI } = require('openai');
+// const { OpenAI } = require('openai');
 const github = require("@actions/github");
 
 const changes = core.getInput("changes");
@@ -13,20 +15,23 @@ const repositoryName = payload.repository.name;
 process();
 
 async function process() {
-  const prompt = buildPrompt();
-  console.log(prompt);
-    const parameters = OpenAI.Chat.ChatCompletionCreateParams = {
-        messages: [{
-                role: "system",
-                content: prompt,
-            },
-            {
-                role: "user",
-                content: changes,
-            }],
-        model: "GPT-4o-2024-05-13",
-    };
-    const chatCompletion = await openAiChat.chat.completions.create(parameters);
+  console.log(buildPrompt());
+    // const parameters = OpenAI.Chat.ChatCompletionCreateParams = {
+    //     messages: [{
+    //             role: "system",
+    //             content: prompt,
+    //         },
+    //         {
+    //             role: "user",
+    //             content: changes,
+    //         }],
+    //     model: "gpt-4o",
+    // };
+    const chatCompletion = await openAiChat.chat.completions.create({
+        model: "gpt-4o",
+        prompt: buildPrompt(),
+        max_tokens: 50,
+    });
 
     console.log(chatCompletion.result);
     core.setOutput("changelog", chatCompletion.result);
