@@ -1,8 +1,6 @@
-import OpenAI from "openai";
-
 const _ = require("lodash");
 const core = require("@actions/core");
-// const { OpenAI } = require('openai');
+const { OpenAI } = require('openai');
 const github = require("@actions/github");
 
 const changes = core.getInput("changes");
