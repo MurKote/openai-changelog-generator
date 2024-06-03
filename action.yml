@@ -7,12 +7,9 @@ inputs:
   openai-api-key:
     description: "Provide your OpenAI API key."
     required: true
-  from-tag:
-    description: "The tag or commit to start generating the changelog from."
+  changes:
+    description: "List of commits or changes to be analyzed. Should adhere to conventional commit standards."
     required: true
-  to-tag:
-    description: "The tag or commit to stop generating the changelog at."
-    required: false
 outputs:
   changelog:
     description: "The generated changelog body for the most recent release."
