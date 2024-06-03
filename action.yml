@@ -10,6 +10,9 @@ inputs:
   changes:
     description: "List of commits or changes to be analyzed. Should adhere to conventional commit standards."
     required: true
+  version:
+    description: "Provide the new release version."
+    required: true
 outputs:
   changelog:
     description: "The generated changelog body for the most recent release."
