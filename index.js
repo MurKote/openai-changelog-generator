@@ -23,7 +23,7 @@ async function process() {
         }],
     });
 
-    console.log(chatCompletion.result);
+    console.log(chatCompletion.choices);
     core.setOutput("changelog", chatCompletion.result);
 }
 
