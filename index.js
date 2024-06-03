@@ -5,7 +5,7 @@ const github = require("@actions/github");
 
 const changes = core.getInput("changes");
 const openApiKey = core.getInput("openai-api-key");
-const openAi = new OpenAI({apiKey: openApiKey});
+const openAiChat = new OpenAI({apiKey: openApiKey});
 const payload = github.context.payload;
 const repositoryOwner = payload.repository.owner.login;
 const repositoryName = payload.repository.name;
@@ -15,7 +15,7 @@ process();
 async function process() {
   const prompt = buildPrompt();
   console.log(prompt);
-    const parameters = OpenAi.Chat.ChatCompletionCreateParams = {
+    const parameters = OpenAI.Chat.ChatCompletionCreateParams = {
         messages: [{
                 role: "system",
                 content: prompt,
@@ -26,7 +26,7 @@ async function process() {
             }],
         model: "GPT-4o-2024-05-13",
     };
-    const chatCompletion = await openAi.chat.completions.create(parameters);
+    const chatCompletion = await openAiChat.chat.completions.create(parameters);
 
     console.log(chatCompletion.result);
     core.setOutput("changelog", chatCompletion.result);
