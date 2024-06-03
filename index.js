@@ -116,7 +116,7 @@ The changelog should:
 The following are the commits you should use to generate the changelog:
 
 \`\`\`
-Release ${version} (${releaseDate.getFullYear()}-${releaseDate.getMonth() + 1}-${releaseDate.getDate()})
+Release ${version} (${releaseDate.toISOString().split("T")[0]})
 ${changes}
 \`\`\`
     `;
