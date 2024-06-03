@@ -5,7 +5,7 @@ const github = require("@actions/github");
 
 let changes = core.getInput("changes");
 const openApiKey = core.getInput("openai-api-key");
-const openAiChat = new OpenAI({apiKey: openApiKey});
+const openAiChat = new OpenAI({ apiKey: openApiKey });
 const payload = github.context.payload;
 const repositoryOwner = payload.repository.owner.login;
 const repositoryName = payload.repository.name;
