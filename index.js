@@ -38,6 +38,7 @@ The release notes should:
 1. have a professional yet friendly tone.
 2. be informative for non-technical users, if necessary reword each entry to be easily understood by a non-technical person.
 3. summarize all patch versions into 1 to 3 paragraphs, add context where possible. the summary should be prepended prior to the patch entries.
+4. limit the release notes to the summary and the first patch entry only.
 5. use markdown formatting.
 6. remove any references to pull requests, issues, commits, and authors in the following forms: (#xxxx), by @username, etc.
 7. not wrap the answer in a codeblock. Just output the text, nothing else.
