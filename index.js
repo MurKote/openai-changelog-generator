@@ -43,7 +43,8 @@ The release notes should:
 6. remove any references to pull requests, issues, commits, and authors in the following forms: (#xxxx), by @username, etc.
 7. each entry should read as a complete sentence.
 8. not wrap the answer in a codeblock. Just output the text, nothing else.
-9. use the following changelog entries to generate the release notes according to the requirements above:
+9. keep the sections in the existing order: "Added", "Changed", "Fixed", "Removed".
+10. use the following changelog entries to generate the release notes according to the requirements above:
 
 \`\`\`
 ${changes}
