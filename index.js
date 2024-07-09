@@ -39,7 +39,7 @@ The release notes should:
 2. be informative for non-technical users, if necessary reword each entry to be easily understood by a non-technical person.
 3. summarize all patch versions into 1 to 3 paragraphs and add context where possible. Avoid any intro sentences. The summary should be prepended prior to the patch version header.
 4. the version and section headers should be left unchanged, and retain the html tags.
-5. limit the release notes to the summary and the first patch entry only.
+5. limit the release notes to the summary and the first version entry only.
 6. use markdown formatting.
 8. each entry should read as a complete, syntactically correct sentence.
 9. not wrap the answer in a codeblock. Just output the text, nothing else.
