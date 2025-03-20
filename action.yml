@@ -7,6 +7,9 @@ inputs:
   openai-api-key:
     description: "Provide your OpenAI API key."
     required: true
+  openai-api-url:
+    description: "Provide your OpenAI API url."
+    required: true
   changes:
     description: "List of commits or changes to be analyzed. Should adhere to conventional commit standards."
     required: true
